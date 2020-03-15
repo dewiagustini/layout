@@ -1,0 +1,107 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(new MaterialApp(
+    title: "Profil",
+    home: new HalamanSatu(),
+  ));
+}
+
+class HalamanSatu extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return new Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
+      appBar: new AppBar(
+          backgroundColor: Colors.blue,
+          title: new Center(
+            child: new Text("Profil"),
+          )
+      ),
+
+      body: Center(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100.0),
+                child: Image.network(
+                  'https://scontent.fsub6-4.fna.fbcdn.net/v/t1.0-9/75557520_117564256368532_9169928968516665344_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_eui2=AeH1FR4zAQNLq1MWnNP_k3K8qBPDjETdL88O22xr5dfA8oKNv1soyLTvwU456aa3lYL8h0W--ov37kvJGed-jcesZVnJ9wyZmCisnMFLK2Qvqg&_nc_ohc=KkRqNaZCEj0AX-OuUb4&_nc_ht=scontent.fsub6-4.fna&oh=258761e6e0ef5cfb98f7038a4add7da6&oe=5E97E2C2',
+                  width: 150.0,
+                  height: 150.0,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Text(
+                "Putu Dewi Agustini", style: TextStyle(color: Colors.white, fontSize: 20.0, height: 2.0, fontWeight: FontWeight.bold,),),
+              Text(
+                "Pendidikan Teknik Informatika",style: TextStyle(color: Colors.white, fontSize: 15.0, height: 1.0,),),
+              Text(
+                "1815051010",style: TextStyle(color: Colors.white, fontSize: 15.0, height: 1.0,),),
+
+              Card(
+                margin: EdgeInsets.only(top: 40.0),
+                child: Row(
+                  children:<Widget> [
+                    Expanded(
+                      child: Card(
+                          color: Colors.black54,
+                          margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                          child: Column (
+                            children: <Widget>[Icon(Icons.favorite, size: 110, color: Colors.pink,),
+                              Text('Nasi Goreng',style: TextStyle(color: Colors.white, fontSize: 17.0, height: 2.0, fontWeight: FontWeight.bold,),)],
+                          )
+                      ),
+                    ),
+
+                    Expanded(
+                      child: Card(
+                          color: Colors.brown,
+                          margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0, bottom: 10.0,),
+                          child: Column (
+                            children: <Widget>[Icon(Icons.home, size: 110, color: Colors.black,),
+                              Text('Panji Selaras',style: TextStyle(color: Colors.white, fontSize: 17.0, height: 2.0, fontWeight: FontWeight.bold,),)],
+                          )
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
+              Card(
+                margin: EdgeInsets.only(top: 10.0),
+                child: Row(
+                  children:<Widget> [
+                    Expanded(
+                      child: Card(
+                          color: Colors.black,
+                          margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                          child: Column (
+                            children: <Widget>[Icon(Icons.phone, size: 110, color: Colors.purple,),
+                              Text('085829494148',style: TextStyle(color: Colors.white, fontSize: 17.0, height: 2.0, fontWeight: FontWeight.bold,),)],
+                          )
+                      ),
+                    ),
+
+                    Expanded(
+                      child: Card(
+                          color: Colors.lightBlueAccent,
+                          margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0, bottom: 10.0,),
+                          child: Column (
+                            children: <Widget>[Icon(Icons.school, size: 110, color: Colors.black,),
+                              Text('Undiksha',style: TextStyle(color: Colors.white, fontSize: 17.0, height: 2.0, fontWeight: FontWeight.bold,),)],
+                          )
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
+            ]
+        ),
+      ),
+
+    );
+  }
+}
